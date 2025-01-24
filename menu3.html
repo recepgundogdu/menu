@@ -1,0 +1,435 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+    <title>Responsive Bootstrap mega menu</title>
+    <link rel="canonical" href="https://codepen.io/skywalkapps/pen/VeNzwG">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://skywalkapps.github.io/bootstrap-dropmenu/stylesheets/bootstrap-dropmenu.min.css">
+    <style>
+      /* Descendant of .nav, Bootstrap specificity (shouldn't be like this) */
+      .nav>.dropdown-megamenu {
+        position: static;
+      }
+
+      @media (max-width: 767px) {
+        .navbar-nav .open .dropdown-container {
+          position: static;
+          float: none;
+          width: auto;
+          margin-top: 0;
+          border: 0;
+          box-shadow: none;
+          border-radius: 0;
+        }
+      }
+
+      .dropdown-megamenu>.dropdown-container {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        max-width: 100%;
+        padding: 15px;
+      }
+
+      .dropdown-megamenu .dropdown-menu {
+        display: block;
+      }
+
+      .link-image .media-object {
+        float: left;
+        margin-bottom: 7.5px;
+      }
+
+      .link-image-sm+.link-image-sm .media-object {
+        margin-left: 7.5px;
+      }
+
+      .thumbnail .caption {
+        min-height: 120px;
+      }
+
+      .thumbnail:hover {
+        text-decoration: none;
+      }
+
+      /* Link list */
+      .list-links {
+        list-style: none;
+        padding: 0;
+      }
+
+      .list-links li {
+        line-height: 1.71428571;
+      }
+
+      .list-links a {
+        color: #555;
+      }
+
+      .list-links a:hover,
+      .list-links a:focus,
+      .list-links a:active {
+        color: #22527b;
+      }
+
+      /* General styles to improve presentation */
+      html,
+      body {
+        height: 100%;
+        min-height: 500px;
+      }
+
+      body {
+        background: linear-gradient(to bottom, #59a874 0, #449a63 100%);
+      }
+
+      .example-megamenu {
+        width: 100%;
+        max-width: 1140px;
+        padding: 20px;
+        margin: 0 auto;
+      }
+
+      h3 {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
+        text-align: center;
+        line-height: 1.3;
+        margin-bottom: 2rem;
+        color: #fff;
+      }
+    </style>
+    <script>
+      window.console = window.console || function(t) {};
+    </script>
+  </head>
+  <body translate="no">
+    <!--
+Follow me on https://twitter.com/koucik
+My stuff: skywalkapps.github.io
+-->
+    <div class="example-megamenu">
+      <h3>Responsive Bootstrap mega menu with various content</h3>
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+              <strong>MegaMenu</strong>
+            </a>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="dropdown dropdown-megamenu open">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Today <span class="sr-only">(current)</span>
+                </a>
+                <div class="dropdown-container">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                      <div class="media">
+                        <div class="media-left">
+                          <a class="link-image" href="#">
+                            <img class="media-object" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22100%22%20height%3D%22100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1949a7a7691%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1949a7a7691%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2224.056249618530273%22%20y%3D%2254.55999994277954%22%3E100x100%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-src="holder.js/100x100" alt="100x100" data-holder-rendered="true" style="width: 100px; height: 100px;">
+                          </a>
+                          <a class="link-image link-image-sm" href="#">
+                            <img class="media-object" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2246%22%20height%3D%2246%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2046%2046%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1949a7a7692%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1949a7a7692%22%3E%3Crect%20width%3D%2246%22%20height%3D%2246%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%224.46875%22%20y%3D%2227.55999994277954%22%3E46x46%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-src="holder.js/46x46" alt="46x46" data-holder-rendered="true" style="width: 46px; height: 46px;">
+                          </a>
+                          <a class="link-image link-image-sm" href="#">
+                            <img class="media-object" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2246%22%20height%3D%2246%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2046%2046%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1949a7a7692%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1949a7a7692%22%3E%3Crect%20width%3D%2246%22%20height%3D%2246%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%224.46875%22%20y%3D%2227.55999994277954%22%3E46x46%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-src="holder.js/46x46" alt="46x46" data-holder-rendered="true" style="width: 46px; height: 46px;">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h5>Today's Featured Collections</h5>
+                          <ul class="list-links">
+                            <li>
+                              <a href="#">Press Every Button</a>
+                            </li>
+                            <li>
+                              <a href="#">Travel with Technology</a>
+                            </li>
+                            <li>
+                              <a href="#">Smart Choice</a>
+                            </li>
+                            <li>
+                              <a href="#">Fall in Love with Tech</a>
+                            </li>
+                            <li>
+                              <a href="#">Smartphones at a Snip</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /col -->
+                    <div class="col-sm-6 col-md-4">
+                      <div class="media">
+                        <div class="media-left">
+                          <a class="link-image" href="#">
+                            <img class="media-object" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22100%22%20height%3D%22100%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20100%20100%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1949a7a7693%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1949a7a7693%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2224.056249618530273%22%20y%3D%2254.55999994277954%22%3E100x100%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-src="holder.js/100x100" alt="100x100" data-holder-rendered="true" style="width: 100px; height: 100px;">
+                          </a>
+                          <a class="link-image link-image-sm" href="#">
+                            <img class="media-object" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2246%22%20height%3D%2246%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2046%2046%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1949a7a7693%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1949a7a7693%22%3E%3Crect%20width%3D%2246%22%20height%3D%2246%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%224.46875%22%20y%3D%2227.55999994277954%22%3E46x46%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-src="holder.js/46x46" alt="46x46" data-holder-rendered="true" style="width: 46px; height: 46px;">
+                          </a>
+                          <a class="link-image link-image-sm" href="#">
+                            <img class="media-object" src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2246%22%20height%3D%2246%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2046%2046%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_1949a7a7693%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A10pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_1949a7a7693%22%3E%3Crect%20width%3D%2246%22%20height%3D%2246%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%224.46875%22%20y%3D%2227.55999994277954%22%3E46x46%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E" data-src="holder.js/46x46" alt="46x46" data-holder-rendered="true" style="width: 46px; height: 46px;">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h5>Today's Trending Collections</h5>
+                          <ul class="list-links">
+                            <li>
+                              <a href="#">Harley-Davidson</a>
+                            </li>
+                            <li>
+                              <a href="#">Will you be my Valentine?</a>
+                            </li>
+                            <li>
+                              <a href="#">Summer Wedding Bridesmaid Dresses</a>
+                            </li>
+                            <li>
+                              <a href="#">Pink Wedding Centerpiece Ideas</a>
+                            </li>
+                            <li>
+                              <a href="#">Wedding Party Table Runners</a>
+                            </li>
+                            <li>
+                              <a href="#">Backyard Wedding Reception</a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /col -->
+                    <div class="col-sm-6 col-md-4">
+                      <h5>My Collections</h5>
+                      <span class="text-muted">You currently have no collections. <a href="#">Learn how to create one</a>. </span>
+                    </div>
+                    <!-- /col -->
+                  </div>
+                  <!-- /row -->
+                </div>
+                <!-- /dropdown-container -->
+              </li>
+              <li class="dropdown dropdown-megamenu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Fashion</a>
+                <div class="dropdown-container">
+                  <div class="row">
+                    <div class="col-sm-4 col-md-2">
+                      <h5>Top categories</h5>
+                      <ul class="list-links">
+                        <li role="separator" class="divider"></li>
+                        <li>
+                          <a href="#">Men's</a>
+                        </li>
+                        <li>
+                          <a href="#">Women's</a>
+                        </li>
+                        <li>
+                          <a href="#">Kids</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- /col -->
+                    <div class="col-sm-4 col-md-3">
+                      <h5>Shop for</h5>
+                      <ul class="list-links">
+                        <li role="separator" class="divider"></li>
+                        <li>
+                          <a href="#">Jewelry &amp; Watches</a>
+                        </li>
+                        <li>
+                          <a href="#">Handbags &amp; Accessories</a>
+                        </li>
+                        <li>
+                          <a href="#">Health &amp; Beauty</a>
+                        </li>
+                        <li>
+                          <a href="#">Shoes</a>
+                        </li>
+                        <li>
+                          <a href="#">Sales &amp; Events</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- /col -->
+                    <div class="col-sm-12 col-md-7">
+                      <img src="holder.js/100px200" data-src="holder.js/100px200" alt="100%x200" style="height: 200px; width: 100%; display: block;">
+                    </div>
+                    <!-- /col -->
+                  </div>
+                  <!-- /row -->
+                </div>
+                <!-- /dropdown-container -->
+              </li>
+              <li class="dropdown dropdown-megamenu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Electronics</a>
+                <div class="dropdown-container">
+                  <div class="row">
+                    <div class="col-sm-4 col-md-2">
+                      <h5>Top categories</h5>
+                      <ul class="list-links">
+                        <li>
+                          <a href="#">Cell Phones &amp; Accessories</a>
+                        </li>
+                        <li>
+                          <a href="#">Cameras &amp; Photo</a>
+                        </li>
+                        <li>
+                          <a href="#">Computers &amp; Tablets</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- /col -->
+                    <div class="col-sm-4 col-md-3">
+                      <h5>Other categories</h5>
+                      <ul class="list-links">
+                        <li>
+                          <a href="#">Car Audio, Video &amp; GPS</a>
+                        </li>
+                        <li>
+                          <a href="#">iPhone</a>
+                        </li>
+                        <li>
+                          <a href="#">iPad</a>
+                        </li>
+                        <li>
+                          <a href="#">TV, Audio</a>
+                        </li>
+                        <li>
+                          <a href="#">Video Games &amp; Consoles</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- /col -->
+                    <div class="col-sm-12 col-md-7">
+                      <img src="holder.js/100px200" data-src="holder.js/100px200" alt="100%x200" style="height: 200px; width: 100%; display: block;">
+                    </div>
+                    <!-- /col -->
+                  </div>
+                  <!-- /row -->
+                </div>
+                <!-- /dropdown-container -->
+              </li>
+              <li class="dropdown dropdown-megamenu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Deals</a>
+                <div class="dropdown-container">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h5>Best deals of the day</h5>
+                      <ul class="list-links">
+                        <li>
+                          <a href="#">Car Audio, Video &amp; GPS</a>
+                        </li>
+                        <li>
+                          <a href="#">iPhone</a>
+                        </li>
+                        <li>
+                          <a href="#">iPad</a>
+                        </li>
+                        <li>
+                          <a href="#">TV, Audio</a>
+                        </li>
+                        <li>
+                          <a href="#">Video Games &amp; Consoles</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- /col -->
+                    <div class="col-sm-3">
+                      <a href="#" class="thumbnail">
+                        <img src="holder.js/100px140" alt="100%x140" data-src="holder.js/100px140" style="height: 140px; width: 100%; display: block;">
+                        <div class="caption">
+                          <h5>Waterproof cellphone cover</h5>
+                          <p>$5.99</p>
+                        </div>
+                      </a>
+                    </div>
+                    <!-- /col -->
+                    <div class="col-sm-3">
+                      <a href="#" class="thumbnail">
+                        <img src="holder.js/100px140" alt="100%x140" data-src="holder.js/100px140" style="height: 140px; width: 100%; display: block;">
+                        <div class="caption">
+                          <h5>Large 20 slot leather watch box organizer</h5>
+                          <p>$25.99</p>
+                        </div>
+                      </a>
+                    </div>
+                    <!-- /col -->
+                    <div class="col-sm-3">
+                      <a href="#" class="thumbnail">
+                        <img src="holder.js/100px140" alt="100%x140" data-src="holder.js/100px140" style="height: 140px; width: 100%; display: block;">
+                        <div class="caption">
+                          <h5>Samsung Galaxy Tab A SM-P550NZAAXAR 9.7-Inch W-Fi Tablet (Titanium with S-Pen)</h5>
+                          <p>$319</p>
+                        </div>
+                      </a>
+                    </div>
+                    <!-- /col -->
+                  </div>
+                  <!-- /row -->
+                </div>
+                <!-- /dropdown-container -->
+              </li>
+              <li class="dropdown dropdown-megamenu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact Us</a>
+                <div class="dropdown-container">
+                  <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                      <h5>Contact us</h5>
+                      <p>Feel free to drop us a line, we will respond as sson as possible.</p>
+                      <form>
+                        <div class="form-group">
+                          <label class="sr-only" for="exampleInputEmail1">Email address</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                          <label class="sr-only" for="exampleInputText1">Text</label>
+                          <textarea type="password" class="form-control" id="exampleInputText1" placeholder="Your Message" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                      </form>
+                    </div>
+                    <!-- /col -->
+                    <div class="col-sm-6 col-md-8">
+                      <img src="holder.js/100px260?text=Map" data-src="holder.js/100px260?text=Map" alt="Map [100%x260]" style="height: 260px; width: 100%; display: block;">
+                    </div>
+                    <!-- /col -->
+                  </div>
+                  <!-- /row -->
+                </div>
+                <!-- /dropdown-container -->
+              </li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+      </nav>
+    </div>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/holder/2.9.1/holder.min.js"></script>
+    <script id="rendered-js">
+      $(document).
+      on('click.bs.dropdown.data-api', '.dropdown', function(e) {
+        e.stopPropagation();
+      });
+      //# sourceURL=pen.js
+    </script>
+    <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" viewBox="0 0 46 46" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;">
+      <defs>
+        <style type="text/css"></style>
+      </defs>
+      <text x="0" y="10" style="font-weight:bold;font-size:10pt;font-family:Arial, Helvetica, Open Sans, sans-serif">46x46</text>
+    </svg>
+  </body>
+</html>

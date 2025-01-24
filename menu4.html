@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>SIMPLE MEGAMENU</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+</head>
+<body>
+    <div class="main-wrapper">
+        <nav class="navbar">
+            <div class="brand-and-icon">
+                <a href="index.html" class="navbar-brand">ESHOP</a>
+                <button type="button" class="navbar-toggler">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div class="navbar-collapse">
+                <ul class="navbar-nav">
+                    <!-- Ana Sayfa -->
+                    <li>
+                        <a href="#">Anasayfa</a>
+                    </li>
+
+                    <!-- Ürünler -->
+                    <li>
+                        <a href="#" class="menu-link">
+                            Ürünler <span class="drop-icon"><i class="fas fa-chevron-down"></i></span>
+                        </a>
+                        <div class="sub-menu">
+                            <!-- Electronics -->
+                            <div class="sub-menu-item">
+                                <h4>Elektronik</h4>
+                                <ul>
+                                    <li><a href="#">Akıllı Telefonlar</a></li>
+                                    <li><a href="#">Tabletler</a></li>
+                                    <li><a href="#">Dizüstü Bilgisayarlar</a></li>
+                                </ul>
+                            </div>
+                            <!-- Home Appliances -->
+                            <div class="sub-menu-item">
+                                <h4>Ev Aletleri</h4>
+                                <ul>
+                                    <li><a href="#">Buzdolapları</a></li>
+                                    <li><a href="#">Çamaşır Makineleri</a></li>
+                                    <li><a href="#">Klimalar</a></li>
+                                </ul>
+                            </div>
+                            <!-- Featured Image -->
+                            <div class="sub-menu-item">
+                                <img src="images/car.png" alt="Products Image">
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Honeywell Forge -->
+                    <li>
+                        <a href="#" class="menu-link">
+                            Honeywell Forge Cyber Security+ <span class="drop-icon"><i class="fas fa-chevron-down"></i></span>
+                        </a>
+                        <div class="sub-menu">
+                            <!-- Benefits -->
+                            <div class="sub-menu-item">
+                                <h4>Neden Honeywell Forge Cyber Security+?</h4>
+                                <ul>
+                                    <li><a href="#">Faydaları</a></li>
+                                    <li><a href="#">Özellikler</a></li>
+                                    <li><a href="#">Uygulama Alanları</a></li>
+                                </ul>
+                            </div>
+                            <!-- Insights -->
+                            <div class="sub-menu-item">
+                                <h4>Honeywell Cyber Insights</h4>
+                                <ul>
+                                    <li><a href="#">Siber Güvenlik Blogları</a></li>
+                                    <li><a href="#">Güncel Durum Raporları</a></li>
+                                    <li><a href="#">Başarı Hikayeleri</a></li>
+                                </ul>
+                            </div>
+                            <!-- Button Call-to-Action -->
+                            <div class="sub-menu-item">
+                                <h2 style="color:white">Endüstriyel Siber Güvenlikte Lider Çözümler</h2>
+                                <button type="button" class="btn">Hemen İncele</button>
+                            </div>
+                            <!-- Image -->
+                            <div class="sub-menu-item">
+                                <img src="images/cloth.png" alt="Cyber Security Image">
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Hakkımızda -->
+                    <li>
+                        <a href="#">Hakkımızda</a>
+                    </li>
+
+                    <!-- İletişim -->
+                    <li>
+                        <a href="#">İletişim</a>
+                    </li>
+
+                    <!-- Blog -->
+                    <li>
+                        <a href="#" class="menu-link">
+                            Blog <span class="drop-icon"><i class="fas fa-chevron-down"></i></span>
+                        </a>
+                        <div class="sub-menu">
+                            <div class="sub-menu-item">
+                                <h4>Popüler Yazılar</h4>
+                                <ul>
+                                    <li><a href="#">Dijital Dönüşüm ve İşletmeler</a></li>
+                                    <li><a href="#">2025 Trendleri</a></li>
+                                    <li><a href="#">Başarıya Giden Yol</a></li>
+                                </ul>
+                            </div>
+                            <div class="sub-menu-item">
+                                <h4>Etkinlikler</h4>
+                                <ul>
+                                    <li><a href="#">Yaklaşan Webinarlar</a></li>
+                                    <li><a href="#">Çalıştaylar</a></li>
+                                    <li><a href="#">Fuarlar</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </div>
+    <section class="header">
+        <h2>Honeywell Forge Cyber Security+</h2>
+        <p>Endüstriyel siber güvenlik çözümleriyle sistemlerinizi koruyun. İnovasyon ve güvenliği bir araya getiren lider çözümler.</p>
+        <button type="button">Daha Fazla Bilgi</button>
+    </section>
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

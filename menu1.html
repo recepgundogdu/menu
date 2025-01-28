@@ -12,8 +12,6 @@
   --background-color: #ffffff;
   --hover-color: rgba(255, 255, 255, 0.1);
   --border-color: #e5e7eb;
-  --top-bar-bg: #f8f9fa;
-  --top-bar-text: #666;
 }
 
 * {
@@ -36,39 +34,8 @@ body {
   padding: 0 1rem;
 }
 
-.top-bar {
-  background-color: var(--top-bar-bg);
-  padding: 0.5rem 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1001;
-}
-
-.top-bar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.quick-links {
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-.quick-links a {
-  color: var(--top-bar-text);
-  text-decoration: none;
-  font-size: 0.875rem;
-}
-
-.quick-links a:hover {
-  color: var(--primary-color);
-}
 
 .separator {
-  color: var(--top-bar-text);
   font-size: 0.875rem;
 }
 
@@ -84,32 +51,25 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
-  top: 40px;
+  top: 0;
   z-index: 1000;
 }
 
 .nav {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo {
-  height: 40px;
-}
-
 .logo img {
-  height: 100%;
-  width: auto;
+  width: 215px;
 }
 
 .nav-list {
   display: flex;
   list-style: none;
-  gap: 2rem;
   align-items: center;
 }
 
@@ -209,11 +169,12 @@ body {
   padding: 0.5rem;
 }
 
-.mobile-quick-links {
-  display: none;
+
+.drop-icon{
+  font-size: 12px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 990px) {
   body {
     padding-top: 140px;
   }
@@ -293,42 +254,6 @@ body {
     opacity: 1;
   }
   
-  .quick-links {
-    display: none;
-  }
-
-  .mobile-quick-links {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 0.25rem;
-    padding: 0.5rem;
-    background-color: var(--top-bar-bg);
-  }
-
-  .mobile-quick-links a {
-    color: var(--top-bar-text);
-    text-decoration: none;
-    font-size: 0.75rem;
-    padding: 0.25rem 0.5rem;
-    background-color: #fff;
-    border-radius: 0.25rem;
-    border: 1px solid var(--border-color);
-  }
-
-  .mobile-quick-links .separator {
-    display: none;
-  }
-
-  .top-bar {
-    padding: 0.25rem 0;
-  }
-
-  .top-bar .container {
-    flex-direction: row;
-    gap: 0.5rem;
-  }
-
   .language-selector {
     margin-bottom: 0;
   }
@@ -342,27 +267,6 @@ body {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   </head>
   <body>
-    <div class="top-bar">
-      <div class="container">
-        <div class="quick-links">
-          <a href="#">Acil Destek İstiyorum</a>
-          <span class="separator">|</span>
-          <a href="#">PoC Talebi</a>
-          <span class="separator">|</span>
-          <a href="#">Servis Noktası</a>
-          <span class="separator">|</span>
-          <a href="#">Bize Ulaşın</a>
-          <span class="separator">|</span>
-          <a href="#">Online Katalog</a>
-        </div>
-        <div class="language-selector">
-          <select>
-            <option value="tr">Türkçe</option>
-            <option value="en">English</option>
-          </select>
-        </div>
-      </div>
-    </div>
     <header class="header">
       <nav class="nav">
         <div class="logo">
@@ -372,116 +276,95 @@ body {
           <i class="fas fa-bars"></i>
         </button>
         <ul class="nav-list">
-          <div class="mobile-quick-links">
-            <a href="#">Acil Destek İstiyorum</a>
-            <a href="#">PoC Talebi</a>
-            <a href="#">Servis Noktası</a>
-            <a href="#">Bize Ulaşın</a>
-            <a href="#">Online Katalog</a>
-          </div>
           <li class="nav-item">
             <a href="#" class="nav-link">Ana Sayfa</a>
           </li>
           <li class="nav-item has-dropdown">
-            <a href="#" class="nav-link">Ürünler</a>
+            <a href="#" class="nav-link">Ürünlerimiz <span class="drop-icon"><i class="fas fa-chevron-down"></i></span></a>
             <div class="dropdown-menu">
               <div class="dropdown-content">
                 <div class="dropdown-section">
-                  <h3>Honeywell</h3>
+                  <h3>Distribütörlerimiz</h3>
                   <ul>
-                    <li><a href="#">Honeywell Forge</a></li>
-                    <li><a href="#">Cyber Security+</a></li>
-                    <li><a href="#">Cyber Insights</a></li>
-                    <li><a href="#">Cyber Watch</a></li>
-                    <li><a href="#">Cyber Watch Governance</a></li>
-                  </ul>
-                </div>
-                <div class="dropdown-section">
-                  <h3>Garland Technology</h3>
-                  <ul>
-                    <li><a href="#">Network TAPs</a></li>
-                    <li><a href="#">Packet Brokers</a></li>
-                    <li><a href="#">Inline Bypass Switches</a></li>
-                    <li><a href="#">Cloud Visibility Solutions</a></li>
-                  </ul>
-                </div>
-                <div class="dropdown-section">
-                  <h3>Diğer Ürünler</h3>
-                  <ul>
-                    <li><a href="#">SafeBreach</a></li>
-                    <li><a href="#">Salvador Technologies</a></li>
-                    <li><a href="#">BTS Sybelle SDCC</a></li>
-                    <li><a href="#">Check Point</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item has-dropdown">
-            <a href="#" class="nav-link">Hizmetler</a>
-            <div class="dropdown-menu">
-              <div class="dropdown-content">
-                <div class="dropdown-section">
-                  <h3>Kurumsal Hizmetler</h3>
-                  <ul>
-                    <li><a href="#">SoC Hizmetler</a></li>
-                    <li><a href="#">EKS Hizmetler</a></li>
-                    <li><a href="#">Siber Güvenlik Platformu</a></li>
-                  </ul>
-                </div>
-                <div class="dropdown-section">
-                  <h3>Özel Çözümler</h3>
-                  <ul>
-                    <li><a href="#">DDoS Koruma</a></li>
-                    <li><a href="#">Sanallaştırma</a></li>
-                    <li><a href="#">Cloud Security</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item has-dropdown">
-            <a href="#" class="nav-link">Kaynaklar</a>
-            <div class="dropdown-menu">
-              <div class="dropdown-content">
-                <div class="dropdown-section">
-                  <h3>Distribütörler</h3>
-                  <ul>
-                    <li><a href="#">Honeywell</a></li>
+                    <li><a href="#">Honeywell Forge Cyber Security+</a></li>
                     <li><a href="#">Garland</a></li>
                     <li><a href="#">SafeBreach</a></li>
-                    <li><a href="#">Check Point</a></li>
+                    <li><a href="#">Salvador</a></li>
+                    <li><a href="#">BTS</a></li>
                   </ul>
                 </div>
                 <div class="dropdown-section">
-                  <h3>Çözüm Ortakları</h3>
+                  <h3>Çözüm Ortaklarımız</h3>
                   <ul>
-                    <li><a href="#">Salvador</a></li>
-                    <li><a href="#">BTS Sybelle</a></li>
+                    <li><a href="#">Check Point</a></li>
                     <li><a href="#">Rapid7</a></li>
+                    <li><a href="#">CyberArk</a></li>
+                    <li><a href="#">Trellix</a></li>
                     <li><a href="#">Radware</a></li>
+                    <li><a href="#">Cisco</a></li>
+                    <li><a href="#">ManageEngine</a></li>
                   </ul>
                 </div>
               </div>
             </div>
           </li>
           <li class="nav-item has-dropdown">
-            <a href="#" class="nav-link">Duyurular</a>
+            <a href="#" class="nav-link">Hizmetler <span class="drop-icon"><i class="fas fa-chevron-down"></i></span></a>
             <div class="dropdown-menu dropdown-menu-small">
               <div class="dropdown-content">
                 <div class="dropdown-section">
                   <ul>
-                    <li><a href="#">2022 Ajanda</a></li>
-                    <li><a href="#">2021 Ajanda</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Diğer Duyurular</a></li>
+                    <li><a href="#">SoC Hizmetleri</a></li>
+                    <li><a href="#">EKS Hizmetleri</a></li>
+                    <li><a href="#">XXXXXXXXXXX</a></li>
                   </ul>
                 </div>
               </div>
             </div>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">İletişim</a>
+          <li class="nav-item has-dropdown">
+            <a href="#" class="nav-link">Katalog <span class="drop-icon"><i class="fas fa-chevron-down"></i></span></a>
+            <div class="dropdown-menu dropdown-menu-small">
+              <div class="dropdown-content">
+                <div class="dropdown-section">
+                  <h3>Distribütörler</h3>
+                  <ul>
+                    <li><a href="#">OTD Tanıtım</a></li>
+                    <li><a href="#">Honeywell Forge</a></li>
+                    <li><a href="#">Garland</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="#" class="nav-link">Haberler <span class="drop-icon"><i class="fas fa-chevron-down"></i></span></a>
+            <div class="dropdown-menu dropdown-menu-small">
+              <div class="dropdown-content">
+                <div class="dropdown-section">
+                  <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Kaynaklar</a></li>
+                    <li><a href="#">Duyurular</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="#" class="nav-link">İletişim <span class="drop-icon"><i class="fas fa-chevron-down"></i></span></a>
+            <div class="dropdown-menu dropdown-menu-small">
+              <div class="dropdown-content">
+                <div class="dropdown-section">
+                  <ul>
+                    <li><a href="#">Servis Noktası</a></li>
+                    <li><a href="#">Acil Destek İstiyorum</a></li>
+                    <li><a href="#">PoC Talebi</a></li>
+                    <li><a href="#">Bize Ulaşın</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </li>
         </ul>
       </nav>

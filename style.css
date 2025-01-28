@@ -9,10 +9,6 @@
 body{
     line-height: 1.4;
 }
-.main-wrapper img{
-    width: 100%;
-    display: block;
-}
 .main-wrapper a{
     color: white;
     text-decoration: none;
